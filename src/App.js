@@ -1,14 +1,12 @@
-import React, {useEffect} from 'react'
-import useInfiniteScroll from "./hooks/useInfiniteScroll"
+import React from 'react'
+import useInfiniteScroll from './hooks/useInfiniteScroll'
 
-function App() {
+export default function App() {
     const {students, lastRef, isIntersecting} = useInfiniteScroll({
         root: null,
         rootMargin: '0px',
         threshold: 1
     })
-
-    console.log(isIntersecting)
 
     return (
         <div className="container">
@@ -29,8 +27,6 @@ function App() {
                             {student.surname}
                         </h1>
 
-                        {/*{students.length - 1 === index && <h1 className="first_item__render">Hello</h1>}*/}
-
                         {students.length - 1 === index && <h1 ref={lastRef}/>}
                     </div>
                 ))
@@ -38,5 +34,3 @@ function App() {
         </div>
     );
 }
-
-export default App;

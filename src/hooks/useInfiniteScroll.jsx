@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useRef, useState} from 'react'
 
 function generateStudents(N = 20) {
     const arr = Array.from({length: N}, (_) => {
