@@ -1,69 +1,78 @@
 :root {
-  --clr-primary: rgba(0, 0, 0, 0.81);
-  --clr-accent: #F7F7FF;
-  --df-margin: 0 20px;
+    --clr-primary: rgba(0, 0, 0, 0.81);
+    --clr-accent: #F7F7FF;
+    --df-margin: 0 20px;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 .container {
-  width: 95%;
-  max-width: 1532px;
-  margin: 0 auto;
+    width: 95%;
+    max-width: 1532px;
+    margin: 0 auto;
 
 }
 
 .title {
-  font-weight: bold;
-  text-align: center;
+    font-weight: bold;
+    text-align: center;
 }
 
 .box {
-  display: flex;
-  width: 40%;
-  border-radius: 20px;
-  border: 1px solid #c9c9c9;
-  background-color: #f3f3f3;
-  margin: 10px auto;
-  cursor: pointer;
+    display: flex;
+    width: 40%;
+    border-radius: 20px;
+    border: 1px solid #c9c9c9;
+    background-color: #f3f3f3;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: transform .6s ease-in-out;
 }
 
 .box:hover {
-  background-color: #c9c9c9;
+    background-color: #c9c9c9;
+}
+
+.box:nth-child(even):hover {
+    transform: translateX(50px);
+}
+
+.box:nth-child(odd):hover {
+    transform: translateX(-50px);
 }
 
 .id {
-  margin: var(--df-margin);
+    margin: var(--df-margin);
 }
 
 .name {
-  color: var(--clr-primary);
-  margin: 0;
+    color: var(--clr-primary);
+    margin: 0;
 }
 
 .pop-up {
-  animation: popUp ease 2s 1;
+    animation: popUp ease 2s 1;
 }
 
 @keyframes popUp {
     from {
-      opacity: 0;
-      margin-top: 25%;
+        opacity: 0;
+        margin-top: 25%;
     }
     to {
-      opacity: 1;
-      margin-bottom: 0;
+        opacity: 1;
+        margin-bottom: 0;
     }
 }
